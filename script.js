@@ -18,9 +18,17 @@ var album = [
 ] 
 const music = document.querySelector('.music');
 const botaoPlay = document.querySelector('.botao-play');
+const intro = document.querySelector('.intro');
+
+
+function initialize() {
+    intro.style.transform = 'translateY(-100vh)';
+    
+    music.play();
+}
 
 botaoPlay.addEventListener('click', function() {
-    music.play();    
+    music.pause();    
 })
 
 closebtn.addEventListener('click', function() {
@@ -43,7 +51,6 @@ for (let i = 0; i < emojis.length; i++) {
         };
     });   
 }
-
 
 document.addEventListener('keydown', function(event) {
     if (event.key === 'Escape') {
