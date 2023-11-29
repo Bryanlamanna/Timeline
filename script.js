@@ -25,6 +25,7 @@ botaoPlay.addEventListener('click', function() {
 
 closebtn.addEventListener('click', function() {
     document.body.style.backgroundColor = 'rgb(236, 213, 213)';
+    imagem.style.visibility = 'hidden';
     moments.style.visibility = 'hidden';
     moments.style.opacity = '0';
 })
@@ -33,6 +34,7 @@ for (let i = 0; i < emojis.length; i++) {
     emojis[i].addEventListener('click', function() {
         document.body.style.backgroundColor = 'rgba(0, 0, 0, 0.481)';
         imagem.src = album[i];
+        imagem.style.visibility = 'visible';
         moments.style.visibility = 'visible';
         moments.style.opacity = '1';
     });   
@@ -41,6 +43,7 @@ for (let i = 0; i < emojis.length; i++) {
 document.addEventListener('keydown', function(event) {
     if (event.key === 'Escape') {
         document.body.style.backgroundColor = 'rgb(236, 213, 213)';
+        imagem.style.visibility = 'hidden';
         moments.style.visibility = 'hidden';
         moments.style.opacity = '0';
     }
