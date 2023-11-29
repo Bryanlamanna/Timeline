@@ -380,6 +380,11 @@ body {
     transform: scale(1.1);
 }
 
+.fa-play, .fa-pause {
+  position: absolute;
+  bottom: .1em;
+}
+
 @keyframes bounce-emoji-right {
     0% {
         transform: translate(-5.2em,0) scale(120%);

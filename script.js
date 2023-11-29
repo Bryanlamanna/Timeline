@@ -19,16 +19,28 @@ var album = [
 const music = document.querySelector('.music');
 const botaoPlay = document.querySelector('.botao-play');
 const intro = document.querySelector('.intro');
-
+var playn = false;
 
 function initialize() {
     intro.style.transform = 'translateY(-100vh)';
-    
     music.play();
+    playn = true;
 }
 
 botaoPlay.addEventListener('click', function() {
-    music.pause();    
+
+    if (playn) {
+        music.pause();
+        document.querySelector('.fa-pause').style.visibility = 'hidden';
+        document.querySelector('.fa-play').style.visibility = 'visible';
+        playn = false;  
+    } else {
+        music.play();
+        document.querySelector('.fa-pause').style.visibility = 'visible';
+        document.querySelector('.fa-play').style.visibility = 'hidden';
+        playn = true;
+    }
+     
 })
 
 closebtn.addEventListener('click', function() {
