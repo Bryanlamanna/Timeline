@@ -413,6 +413,7 @@ body {
 
 
 .botao-play {
+  color: white;
     transition: .5s;
     z-index: 99;
     border: none;
