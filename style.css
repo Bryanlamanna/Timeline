@@ -120,13 +120,28 @@ body {
     transition: .5s;    
     position: absolute;
     background-color: rgb(53, 53, 53);
-    width: 95%;
+    width: fit-content;
     border-radius: 8px;
-    height: 90vh;
+    color: white;
+    padding: 1em;
+    
+    display: flex;
+    flex-direction: column;
 }
 
 .photo {
-    visibility: hidden;
+    width: 55em;
+    border-radius: 8px;
+}
+
+.moment-photo i {
+    cursor: pointer;
+    position: absolute;
+    right: 4px;
+    top: -1.4em;
+    color: white;
+  
+    margin-top: 0;
 }
 
 @keyframes bounce-emoji-right {
