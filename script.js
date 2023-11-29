@@ -2,6 +2,7 @@ const emojis = document.querySelectorAll('.moment-emoji-right, .moment-emoji-lef
 const moments = document.querySelector('.moment-photo');
 const closebtn = document.querySelector('.fa-circle-xmark');
 const imagem = document.querySelector('.photo');
+const caption = document.querySelector('.caption');
 var album = [
     'assets/imagem (1).jpg',
     'assets/imagem (2).jpg',
@@ -20,6 +21,16 @@ const music = document.querySelector('.music');
 const botaoPlay = document.querySelector('.botao-play');
 const intro = document.querySelector('.intro');
 var playn = false;
+var captions = [
+    'Explore the fascinating world of dung beetles and their remarkable abilities!',
+    'Embark on a smelly adventure through the sewage system of a bustling city!',
+    'Discover the hidden treasures of a composting facility and learn about the magic of decomposition!',
+    'Join us on a journey to the land of manure, where you can fill witness the art of fertilizer production!',
+    'Experience the aromatic wonders of a sewage treatment plant and learn how it helps keep our environment clean!',
+    'Travel to a farm and witness the circle of life as animals turn waste into valuable resources!',
+    'Delve into the science of feces and learn about its role in the ecosystem!',
+    
+]
 
 function initialize() {
     intro.style.transform = 'translateY(-100vh)';
@@ -44,7 +55,7 @@ botaoPlay.addEventListener('click', function() {
 })
 
 closebtn.addEventListener('click', function() {
-    document.body.style.backgroundColor = 'rgb(236, 213, 213)';
+    document.body.style.backgroundColor = 'white';
     imagem.src = '';
     imagem.style.visibility = 'hidden';
     moments.style.visibility = 'hidden';
@@ -55,6 +66,7 @@ for (let i = 0; i < emojis.length; i++) {
     emojis[i].addEventListener('click', function() {
         document.body.style.backgroundColor = 'rgba(0, 0, 0, 0.481)';
         imagem.src = album[i];
+        caption.innerHTML = captions[i];
         imagem.onload = function() {
             // Quando a imagem estiver carregada, exibe a div moments
             imagem.style.visibility = 'visible';
@@ -66,7 +78,7 @@ for (let i = 0; i < emojis.length; i++) {
 
 document.addEventListener('keydown', function(event) {
     if (event.key === 'Escape') {
-        document.body.style.backgroundColor = 'rgb(236, 213, 213)';
+        document.body.style.backgroundColor = 'white';
         imagem.src = '';
         imagem.style.visibility = 'hidden';
         moments.style.visibility = 'hidden';
