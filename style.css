@@ -130,8 +130,9 @@ body {
 }
 
 .photo {
-    width: 55em;
+    
     border-radius: 8px;
+    height: 75vh;
 }
 
 .moment-photo i {
@@ -142,6 +143,23 @@ body {
     color: white;
   
     margin-top: 0;
+}
+
+
+.botao-play {
+    transition: .5s;
+    z-index: 99;
+    border: none;
+    background-color: transparent;
+    font-size: x-large;
+    cursor: pointer;
+    position: absolute;
+    bottom: 1em;
+    left: 1em;
+}
+
+.botao-play:hover {
+    transform: scale(1.1);
 }
 
 @keyframes bounce-emoji-right {

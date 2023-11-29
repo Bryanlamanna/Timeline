@@ -16,7 +16,12 @@ var album = [
     'assets/imagem (11).jpg',
     'assets/imagem (12).jpg',
 ] 
+const music = document.querySelector('.music');
+const botaoPlay = document.querySelector('.botao-play');
 
+botaoPlay.addEventListener('click', function() {
+    music.play();    
+})
 
 closebtn.addEventListener('click', function() {
     document.body.style.backgroundColor = 'rgb(236, 213, 213)';
@@ -24,7 +29,7 @@ closebtn.addEventListener('click', function() {
     moments.style.opacity = '0';
 })
 
-for (let i = 0; i < album.length; i++) {
+for (let i = 0; i < emojis.length; i++) {
     emojis[i].addEventListener('click', function() {
         document.body.style.backgroundColor = 'rgba(0, 0, 0, 0.481)';
         imagem.src = album[i];
