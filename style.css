@@ -1,5 +1,45 @@
 @import url("https://fonts.googleapis.com/css?family=Raleway");
 
+
+.ocean {
+  height: 5%;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: #015871;
+}
+
+.wave {
+  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/85486/wave.svg) repeat-x;
+  position: absolute;
+  width: 6400px;
+  top: -198px;
+  left: 0;
+  height: 198px;
+  transform: translate(0, 0, 0);
+  animation: wave 6.7s ease infinite;
+}
+
+.wave:nth-of-type(2) {
+  top: -168px;
+  animation: swell 4s ease infinite;
+  opacity: 1;
+}
+
+@keyframes wave {
+  0% { margin-left: 0; }
+  100% { margin-left: -1600px;}
+}
+@keyframes swell {
+  0%, 100% {
+    transform: translate(0, -30px);
+  }
+  50% {
+    transform: translate(0, 5px);
+  }
+}
+
 :root {
   --glow-color: hsl(186 100% 69%);
 }
@@ -212,18 +252,19 @@
 }
 
 body {
-    
+    overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
+    max-height: 100vh;
     max-width: 100%;
     background-color: rgb(236, 213, 213);
 }
 
 .intro {
+    transform: translateY(50vh);
     justify-content: center;
-    transition: 1s;    
+    transition: 5s;    
     display: flex;
     flex-direction: column  ;
     z-index: 99;
@@ -255,7 +296,7 @@ body {
     padding-top: 3em;
     animation: pulse-emoji 6s  ;
     position: absolute;
-    height: 100vh;
+    bottom: 3em;
     margin: 0 auto;
     width: 100%;
     
