@@ -25,6 +25,7 @@ botaoPlay.addEventListener('click', function() {
 
 closebtn.addEventListener('click', function() {
     document.body.style.backgroundColor = 'rgb(236, 213, 213)';
+    imagem.src = '';
     imagem.style.visibility = 'hidden';
     moments.style.visibility = 'hidden';
     moments.style.opacity = '0';
@@ -43,6 +44,7 @@ for (let i = 0; i < emojis.length; i++) {
 document.addEventListener('keydown', function(event) {
     if (event.key === 'Escape') {
         document.body.style.backgroundColor = 'rgb(236, 213, 213)';
+        imagem.src = '';
         imagem.style.visibility = 'hidden';
         moments.style.visibility = 'hidden';
         moments.style.opacity = '0';
