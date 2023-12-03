@@ -1,4 +1,4 @@
-const emojis = document.querySelectorAll('.moment-emoji-right, .moment-emoji-left');
+const emojis = document.querySelectorAll('.moment-emoji');
 const moments = document.querySelector('.moment-photo');
 const closebtn = document.querySelector('.fa-circle-xmark');
 const imagem = document.querySelector('.photo');
@@ -29,10 +29,17 @@ var captions = [
     'Experience the aromatic wonders of a sewage treatment plant and learn how it helps keep our environment clean!',
     'Travel to a farm and witness the circle of life as animals turn waste into valuable resources!',
     'Delve into the science of feces and learn about its role in the ecosystem!',
-    
+    'Explore the fascinating world of dung beetles and their remarkable abilities!',
+    'Embark on a smelly adventure through the sewage system of a bustling city!',
+    'Discover the hidden treasures of a composting facility and learn about the magic of decomposition!',
+    'Join us on a journey to the land of manure, where you can fill witness the art of fertilizer production!',
+    'Experience the aromatic wonder of a sewage treatment plant and learn how it helps keep our environment clean!',
 ]
 
+document.querySelector('.fa-pause').style.visibility = 'hidden';
+
 function initialize() {
+    document.querySelector('.fa-pause').style.visibility = 'visible';   
     intro.style.transform = 'translateY(-100vh)';
     music.play();
     playn = true;

@@ -262,6 +262,7 @@ body {
 }
 
 .intro {
+    z-index: 100;
     transform: translateY(50vh);
     justify-content: center;
     transition: 5s;    
@@ -293,9 +294,8 @@ body {
 }
 
 .timeline {
-  justify-content: center;
-    padding-top: 3em;
-    animation: pulse-emoji 6s  ;
+  align-items: center;
+    justify-content: center;
     position: absolute;
     margin: 0 auto;
     width: 100%;
@@ -303,66 +303,78 @@ body {
     bottom: 0;
 }
 
-.moment-emoji-right {
-    animation: bounce-emoji-right 5s linear infinite;
-    opacity: .95;
-    transition: .3s;
-    transform: translate(-5.2em, 0) scale(120%) ;
-    align-items: center;
-    width: 5em;
-    display: flex;
-    flex-direction: column;
-    justify-items: center;
-    margin: 0 auto;
-    overflow: hidden;
-    
+table {
+ 
+  padding-top: 3em;
+  padding-bottom: 3em;
+  height: 100vh;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  vertical-align: middle;
+  text-align: center;
 }
 
-.moment-emoji-left {
-    animation: bounce-emoji-left 5s linear infinite;
-    opacity: .95;
-    transition: .3s;
-    overflow: visible;
-    transform: translate(1.8em, 0) scale(120%);
-    align-items: center;
-    width: 5em;
+
+@keyframes wavy {
+    0% {
+        transform: translateY(0) translateX(0);
+    }
+    30% {
+        transform: translateY(-.5em) translateX(-1em);
+        
+    }
+    70% {
+        transform: translateY(.5em) translateX(1em);
+    }
+    100% {
+        transform: translateY(0) translateX(0);
+    }
+}
+
+
+
+
+.moment-emoji {
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.336);
+    animation: wavy 6s infinite linear;
+    padding-left: .5em;
+    color: white;
+    border-radius: 8px;
+    max-height: 2em;
+    text-align: center;
+    justify-content: center;
     display: flex;
-    flex-direction: column;
-    justify-items: center;
-    margin: 0 auto;
-    overflow: hidden;
+    transition: .3s;
+    align-items: center;
+    cursor: pointer;
+}
+
+.moment-emoji:hover .emoji {
+    transform: scale(130%) translateX(5px);
+}
+
+.month {
+    font-size: 1em;
+    width: 6em;
+   
 }
 
 .emoji {
+  transform: translateX(.3em);
     cursor: pointer;
-    
+    max-width: 2.5em;
     transition: .5s;
 }
 
-.moment-emoji-left:active  {
-    transform: translate(1.8em, 0) scale(90%);
+.moment-emoji:active  {
+    transform:  scale(90%);
     opacity: .7;
 }
 
-.moment-emoji-right:active {
-    transform: translate(-5.2em, 0) scale(90%);
-    opacity: .7;
-}
 
-.moment-emoji-left:hover .date, .moment-emoji-right:hover .date{
-    transform: translate(0,0);
-}
 
-.moment-emoji-left:hover  {
-    transform: translate(1.8em, 0) scale(150%);
-    opacity: 1;
-    
-}
 
-.moment-emoji-right:hover {
-    transform: translate(-5.2em, 0) scale(150%);
-    opacity: 1;
-}
 
 .date {
     font-size: smaller;
@@ -385,7 +397,7 @@ body {
     color: white;
     padding: 1em;
     bottom: 0;
-    margin-bottom: 4%;
+    margin-bottom: 7%;
     display: flex;
     flex-direction: column;
 }
@@ -404,13 +416,16 @@ body {
 .moment-photo i {
     cursor: pointer;
     position: absolute;
-    right: 4px;
-    top: -1.4em;
+    right: 7px;
+    top: 7px;
     color: white;
-  
+    transition: .5s;
     margin-top: 0;
 }
 
+.moment-photo i:hover {
+    color: red;
+}
 
 .botao-play {
   color: white;
@@ -423,7 +438,10 @@ body {
     position: absolute;
     bottom: 1em;
     left: 1em;
+   
+
 }
+
 
 .botao-play:hover {
     transform: scale(1.1);
