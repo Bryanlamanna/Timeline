@@ -477,6 +477,8 @@ table {
 }
 
 .text-right {
+  -webkit-text-stroke:.5px;
+
   transition: .5s;
   font-size: large;
   animation-delay: 0.8s;
@@ -492,10 +494,11 @@ table {
   right: 6em;
   top: 50%;
   opacity: 0;
-  color: #0d7c9b;
+  color: #094455;
 }
 
 .text-left {
+  -webkit-text-stroke: .5px;
   transition: .5s;
   font-size: large;
   animation-delay: 0.8s;
@@ -510,5 +513,5 @@ table {
   left: 6em;
   top: 50%;
   opacity: 0;
-  color: #0d7c9b;
+  color: #094455;
 }
