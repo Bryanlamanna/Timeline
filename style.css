@@ -475,3 +475,40 @@ table {
         transform: translate(1.8em,0) scale(120%);
     }
 }
+
+.text-right {
+  transition: .5s;
+  font-size: large;
+  animation-delay: 0.8s;
+  animation: wavy 6s infinite linear;
+  border-radius: 8px;
+  padding: 1em;
+  background-color: transparent;
+  border: 2px solid #0d7c9b;
+
+  position: absolute;
+  width: 20em;
+  text-align: justify;
+  right: 6em;
+  top: 50%;
+  opacity: 0;
+  color: #0d7c9b;
+}
+
+.text-left {
+  transition: .5s;
+  font-size: large;
+  animation-delay: 0.8s;
+  animation: wavy 6s infinite linear;
+  border-radius: 8px;
+  padding: 1em;
+  background-color: transparent;
+  border: 2px solid #0d7c9b;
+  position: absolute;
+  width: 20em;
+  text-align: justify;
+  left: 6em;
+  top: 50%;
+  opacity: 0;
+  color: #0d7c9b;
+}

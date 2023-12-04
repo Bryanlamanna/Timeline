@@ -36,6 +36,30 @@ var captions = [
     'Experience the aromatic wonder of a sewage treatment plant and learn how it helps keep our environment clean!',
 ]
 
+const leftPannel = document.querySelector('.text-left');
+const rightPannel = document.querySelector('.text-right');
+
+emojis[0].addEventListener('mouseenter', function() {
+    leftPannel.style.top = '30%';
+    leftPannel.style.opacity = '1';
+})
+
+emojis[0].addEventListener('mouseleave', function() {
+    leftPannel.style.top = '50%';
+    leftPannel.style.opacity = '0';
+})
+
+emojis[1].addEventListener('mouseenter', function() {
+    rightPannel.style.top = '30%';
+    rightPannel.style.opacity = '1';
+})
+
+emojis[1].addEventListener('mouseleave', function() {
+    rightPannel.style.top = '50%';
+    rightPannel.style.opacity = '0';
+})
+
+
 document.querySelector('.fa-pause').style.visibility = 'hidden';
 
 function initialize() {
