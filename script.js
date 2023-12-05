@@ -35,29 +35,38 @@ var captions = [
     'Join us on a journey to the land of manure, where you can fill witness the art of fertilizer production!',
     'Experience the aromatic wonder of a sewage treatment plant and learn how it helps keep our environment clean!',
 ]
-
 const leftPannel = document.querySelector('.text-left');
 const rightPannel = document.querySelector('.text-right');
+const rightOnes = document.querySelectorAll('.right');
+const leftOnes = document.querySelectorAll('.left');    
 
-emojis[0].addEventListener('mouseenter', function() {
-    leftPannel.style.top = '30%';
-    leftPannel.style.opacity = '1';
-})
+for (let i = 0; i < rightOnes.length; i++) {
+    rightOnes[i].addEventListener('mouseenter', function() {
+        rightPannel.style.opacity = '1';
+        rightPannel.style.top = '25%';
+    })
+}
 
-emojis[0].addEventListener('mouseleave', function() {
-    leftPannel.style.top = '50%';
-    leftPannel.style.opacity = '0';
-})
+for (let i = 0; i < rightOnes.length; i++) {
+    rightOnes[i].addEventListener('mouseleave', function() {
+        rightPannel.style.opacity = '0';
+        rightPannel.style.top = '50%';
+    })
+}
 
-emojis[1].addEventListener('mouseenter', function() {
-    rightPannel.style.top = '30%';
-    rightPannel.style.opacity = '1';
-})
+for (let i = 0; i < leftOnes.length; i++) {
+    leftOnes[i].addEventListener('mouseenter', function() {
+        leftPannel.style.opacity = '1';
+        leftPannel.style.top = '25%';
+    })
+}
 
-emojis[1].addEventListener('mouseleave', function() {
-    rightPannel.style.top = '50%';
-    rightPannel.style.opacity = '0';
-})
+for (let i = 0; i < leftOnes.length; i++) {
+    leftOnes[i].addEventListener('mouseleave', function() {
+        leftPannel.style.opacity = '0';
+        leftPannel.style.top = '50%';
+    })
+}
 
 
 document.querySelector('.fa-pause').style.visibility = 'hidden';
