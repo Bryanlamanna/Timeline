@@ -8,7 +8,7 @@ body {
 }
 
 .botao-play {
-    color: white;
+    color: rgb(82, 82, 82);
       transition: .5s;
       z-index: 99;
       border: none;
@@ -16,7 +16,7 @@ body {
       font-size: x-large;
       cursor: pointer;
       position: absolute;
-      bottom: 1em;
+      bottom: 3em;
       left: 1em;
      
   
@@ -144,7 +144,7 @@ table {
     background-color: transparent;
     border: 2px solid #0d7c9b;
   
-    position: absolute;
+    position: fixed;
     width: 20em;
     text-align: justify;
     right: 6em;
@@ -163,7 +163,7 @@ table {
     padding: 1em;
     background-color: transparent;
     border: 2px solid #0d7c9b;
-    position: absolute;
+    position: fixed;
     width: 20em;
     text-align: justify;
     left: 6em;
@@ -177,7 +177,7 @@ table {
     visibility: hidden;
     opacity: 0;
     transition: .5s;    
-    position: absolute;
+    position: fixed;
     background-color: rgb(53, 53, 53);
     width: fit-content;
     border-radius: 8px;
