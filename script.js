@@ -113,6 +113,7 @@ for (let i = 0; i < leftOnes.length; i++) {
 document.querySelector('.fa-pause').style.visibility = 'hidden';
 
 function initialize() {
+    document.querySelector('.content').style.display = 'block'; 
     document.querySelector('.fa-pause').style.visibility = 'visible';   
     intro.style.transform = 'translateY(-100vh)';
     music.play();
@@ -136,6 +137,8 @@ botaoPlay.addEventListener('click', function() {
 })
 
 closebtn.addEventListener('click', function() {
+    document.querySelector('.timeline').style.visibility = 'visible';
+    document.querySelector('.timeline').style.opacity = '1';
     document.body.style.backgroundColor = 'white';
     imagem.src = '';
     imagem.style.visibility = 'hidden';
@@ -145,6 +148,8 @@ closebtn.addEventListener('click', function() {
 
 for (let i = 0; i < emojis.length; i++) {
     emojis[i].addEventListener('click', function() {
+        document.querySelector('.timeline').style.visibility = 'hidden';
+        document.querySelector('.timeline').style.opacity = '0';
         document.body.style.backgroundColor = 'rgba(0, 0, 0, 0.481)';
         imagem.src = album[i];
         caption.innerHTML = captions[i];
@@ -159,6 +164,8 @@ for (let i = 0; i < emojis.length; i++) {
 
 document.addEventListener('keydown', function(event) {
     if (event.key === 'Escape') {
+        document.querySelector('.timeline').style.visibility = 'visible';
+        document.querySelector('.timeline').style.opacity = '1';
         document.body.style.backgroundColor = 'white';
         imagem.src = '';
         imagem.style.visibility = 'hidden';
